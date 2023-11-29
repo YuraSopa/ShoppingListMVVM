@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.example.shoppinglistmvvm"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,6 +33,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -63,10 +67,12 @@ dependencies {
     // Annotation processor
     kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
 
+
+
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
 
     // Kodein
-    implementation ("org.kodein.di:kodein-di-generic-jvm:$kodein_version")
-    implementation ("org.kodein.di:kodein-di-framework-android-x:$kodein_version")
+    implementation("org.kodein.di:kodein-di-generic-jvm:$kodein_version")
+    implementation("org.kodein.di:kodein-di-framework-android-x:$kodein_version")
 }
